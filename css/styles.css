@@ -402,25 +402,33 @@ a {
     margin-left: 10px;
   }
 }
+.btn:hover {
+  background-color: red;
+}
 
 .default {
-  background-color: #51ddfc;
+  background-color: #9cecfd;
+  transition: background-color 1.2s ease-in-out;
 }
 
 .error {
-  background-color: #e4757a;
+  background-color: #f1b5b8;
+  transition: background-color 1.2s ease-in-out;
 }
 
 .info {
-  background-color: #927bc1;
+  background-color: #bdafd9;
+  transition: background-color 1.2s ease-in-out;
 }
 
 .success {
-  background-color: #63cc82;
+  background-color: #9ddfb0;
+  transition: background-color 1.2s ease-in-out;
 }
 
 .warning {
-  background-color: #fd7856;
+  background-color: #feb4a2;
+  transition: background-color 1.2s ease-in-out;
 }
 
 /* ============================================= */

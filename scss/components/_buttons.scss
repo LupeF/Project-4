@@ -12,11 +12,16 @@
         }
       }
     }
+    &:hover{
+      background-color: red;
+      
+    }
 }
   
 @each $classes ,$colors in $btnbckg {
     #{$classes}{
-      background-color: $colors;
+      background-color: lighten($color: $colors, $amount: 15);
+      transition: background-color 1.2s ease-in-out;
     }
 }
   
