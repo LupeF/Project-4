@@ -13,15 +13,15 @@
       }
     }
     &:hover{
-      background-color: red;
+      background-color:lighten($color: $btnhov, $amount: 15) ;
       
     }
 }
   
 @each $classes ,$colors in $btnbckg {
     #{$classes}{
-      background-color: lighten($color: $colors, $amount: 15);
-      transition: background-color 1.2s ease-in-out;
+      background-color: $colors;
+      transition: background-color .5s ease-in-out;
     }
 }
   

@@ -8,7 +8,7 @@
     &-link {
       @include linkstyle;
         &:hover {
-          @include hovstyle(#fff, $hover-color);
+          @include hovstyle($nav-color, $hover-color);
         }
     }
       @include breakpoint(sm){
