@@ -4,7 +4,7 @@
 
 .container {
     padding: 0 10px;
-    @media(min-width: 768px){
+    @include breakpoint(sm){
       &{
         @include center;
         max-width: 1400px;
@@ -15,16 +15,16 @@
   .row {
     @include flex($disp:flex,$flexD:column);
     padding: 1em 10px;
-    @media(min-width: 768px){
+    @include breakpoint(sm){
       &{
-        @include flex($flexD:row)
+        @include flex($flexD:row);
       }
     }
   }
   
   [class^=col] {
     @include colstyle;
-    @media(min-width:768px){
+    @include breakpoint(sm){
       & {
         @include flex($disp:flex, $just:center, $align:center);
         margin-top: 0;
@@ -32,7 +32,7 @@
       & + & {
         margin-left: 10px;
       }
-    } 
+    }
   }
   @for $i from 1 through 12 {
     .col-#{$i}{
@@ -42,7 +42,7 @@
   
   @for $i from 1 through 12 {
     .theme.col-#{$i}{
-      background-color: adjust-hue( #927bc1, $i * 60)
+      background-color: adjust-hue( #927bc1, $i * 60);
     }
   }
 

@@ -14,11 +14,11 @@
     
   &-logo {
     @include imgstyle;
-    @media(min-width: 768px){
+    @include breakpoint(sm){
       & {
         margin-left: initial;
         margin-right: initial;
       }
     }
-    }
+  }
 }

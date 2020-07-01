@@ -100,15 +100,16 @@
     margin-right: auto;
 }
 
-@mixin breakpoint($map) {
-    $value: map-get($map:break, $key:$map );
-    $sm: map-get($map: break, $key:sm );
-    @if $value < $sm {
-        @media(min-width: $sm){
+@mixin breakpoint($size) {
+    $value: map-get($break, $size );
+    $lg: map-get( $break, 'lg' );
+    
+    @if $value < $lg {
+        @media(min-width: $value){
             @content;
         }
     }@else {
-        @media(min-width: $value){
+        @media(min-width: $lg){
             @content;
         }
     }

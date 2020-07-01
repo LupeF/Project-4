@@ -8,14 +8,14 @@
     &-link {
       @include linkstyle;
         &:hover {
-          @include hovstyle(#fff, $hover-color)
+          @include hovstyle(#fff, $hover-color);
         }
     }
-    @media(min-width: 768px){
+      @include breakpoint(sm){
       & {
         @include flex ($flexD:row, $just:flex-end, $align:center);
         &-link {
-          @include flex($flexB:100px)
+          @include flex($flexB:100px);
         }
       }
     }
