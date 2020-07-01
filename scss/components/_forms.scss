@@ -1,0 +1,15 @@
+/* ============================================= */
+/*              Forms                            */
+/* ============================================= */
+
+.form {
+  @include flex($flexB:100%);  
+  }
+  
+  .input{
+    @include inputstyle;
+  }
+  
+  .hidden {
+    @include hiddenstyle;
+  }

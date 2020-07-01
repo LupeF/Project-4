@@ -1,0 +1,24 @@
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+
+.nav {
+  @include flex($disp:flex, $flexD:column, $flexB:100%);
+    padding-left: 0;
+    &-link {
+      @include linkstyle;
+        &:hover {
+          @include hovstyle(#fff, $hover-color)
+        }
+    }
+    @media(min-width: 768px){
+      & {
+        @include flex ($flexD:row, $just:flex-end, $align:center);
+        &-link {
+          @include flex($flexB:100px)
+        }
+      }
+    }
+  }
+  
+  

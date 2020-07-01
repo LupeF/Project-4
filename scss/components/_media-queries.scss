@@ -1,0 +1,53 @@
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+// @media (min-width: 768px) {
+
+    // .container {
+    //   @include center;
+    //   max-width: 1400px;
+    // }
+    
+    // .centered {
+    //   @include center;
+    // }
+    
+    // .row {
+    //   @include flex($flexD:row)
+    // }
+    
+    // [class^=col] {
+    //   @include flex($disp:flex, $just:center, $align:center);
+    //   margin-top: 0;
+    //   & + & {
+    //     margin-left: 10px;
+    //   }
+    // }
+    
+    
+    // @for $i from 1 through 12 {
+    //   .col-#{$i}{
+    //     flex-basis: ($i/12)*100%;
+    //   }  
+    // }
+    
+    // .nav {
+    //   @include flex ($flexD:row, $just:flex-end, $align:center);
+    //   &-link {
+    //     @include flex($flexB:100px)
+    //   }
+    // }
+    
+    // .btn {
+    //   padding: 10px 30px;
+    //   & + & {
+    //     margin-left: 10px;
+    //   }
+    // }
+    
+    // .logo {
+    //   margin-left: initial;
+    //   margin-right: initial;
+    // }
+    
+    // }

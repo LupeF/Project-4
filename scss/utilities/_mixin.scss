@@ -1,0 +1,115 @@
+// buttons //
+@mixin btnstyle{
+    margin-top: 15px;
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+// grid //
+@mixin colstyle{
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@mixin flex(
+    $disp:null,
+    $just:null,
+    $flexD:null,
+    $flexB:null,
+    $align:null
+){
+    display: $disp;
+    justify-content: $just;
+    flex-direction: $flexD;
+    flex-basis: $flexB;
+    align-items: $align;
+}
+
+//typography//
+@mixin blockqfnt{
+    font-size: 1.5em;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $blockq-color;
+    border-radius: 5px;
+}
+
+@mixin color-fntweight ($col:null,$wght:null){
+    color: $col;
+    font-weight: $wght;
+}
+
+//images//
+@mixin imgstyle ($margT:null, $maxW:null, $maxH:null){
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $margT;
+    max-width: $maxW;
+    max-height: $maxH;
+}
+
+//nav//
+@mixin linkstyle{
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    transition: 
+      background-color .2s ease-in-out, 
+      color .2s ease-in-out;
+}
+
+@mixin hovstyle($col,$bkcol){
+    color: $col;
+    background-color: $bkcol;
+}
+
+// form//
+@mixin inputstyle{
+    display: block;
+    width: 94%;
+    margin: 10px auto 0;
+    border: none;
+    padding: 10px;
+    border-bottom: 5px solid #58e1c1;
+}
+
+@mixin hiddenstyle{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+//media queries//
+@mixin center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin breakpoint($map) {
+    $value: map-get($map:break, $key:$map );
+    $sm: map-get($map: break, $key:sm );
+    @if $value < $sm {
+        @media(min-width: $sm){
+            @content;
+        }
+    }@else {
+        @media(min-width: $value){
+            @content;
+        }
+    }
+}

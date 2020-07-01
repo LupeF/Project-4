@@ -1,0 +1,24 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+    @include btnstyle;
+    @media(min-width: 768px){
+      & {
+        padding: 10px 30px;
+        & + & {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  
+@each $classes ,$colors in $btnbckg {
+    #{$classes}{
+      background-color: $colors;
+    }
+}
+  
+  
+  

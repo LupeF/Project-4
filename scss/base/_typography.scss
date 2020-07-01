@@ -1,0 +1,40 @@
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+
+* {
+    font-family: 'Lato', sans-serif;
+    color: #777;
+    box-sizing: border-box;
+  }
+  
+  p {
+    line-height: 1.45em;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  /* ============================================= */
+  /*              Typography                       */
+  /* ============================================= */
+  
+  .headline-primary {
+    @include color-fntweight($headln-color-one) ;
+    margin-left: 10px;
+  }
+  
+  .headline-secondary {
+    @include color-fntweight($headln-color-two, 300);
+  }
+  
+  .link {
+    @include color-fntweight($link-color, 700);
+  }
+  
+  .blockquote {
+    @include blockqfnt;
+    @include color-fntweight($wght:300)
+  }
